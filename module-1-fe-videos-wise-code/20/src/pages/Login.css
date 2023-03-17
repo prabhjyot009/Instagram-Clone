@@ -1,0 +1,19 @@
+.login-container{
+    margin-top: 8rem;
+    font-family: 'Poppins', sans-serif;
+}
+.input-bg{
+    background-color: #f3f3f3;
+    color: #dbd5d5;
+    font-size: 0.9rem;
+    height: 2.9rem;
+}
+.custom-btn{
+    padding: 0.6rem;
+    border-radius: 4px;
+}
+.custom-btn-blue{
+    border: 1px solid #b3e0ff;
+    background-color: #b3e0ff;
+    color: #fff;
+}
