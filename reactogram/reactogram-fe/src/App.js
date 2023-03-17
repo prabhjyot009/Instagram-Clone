@@ -6,7 +6,7 @@ import NavBar from './components/NavBar';
 import PostOverview from './pages/PostOverview';
 function App() {
   return (
-    <div>
+    <div className='app-bg'>
       <NavBar/>
       <Router>
         <Routes>
@@ -14,6 +14,7 @@ function App() {
           <Route exact path='/login' element={<Login />}></Route>
           <Route exact path='/signup' element={<Signup />}></Route>
           <Route exact path='/posts' element={<PostOverview />}></Route>
+          <Route exact path='/myprofile' element={<Profile />}></Route>
         </Routes>
       </Router>
     </div>
