@@ -4,11 +4,12 @@ import Signup from './pages/Signup';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import PostOverview from './pages/PostOverview';
+import Profile from './pages/Profile';
 function App() {
   return (
     <div className='app-bg'>
-      <NavBar/>
       <Router>
+        <NavBar />
         <Routes>
           <Route exact path='/' element={<Login />}></Route>
           <Route exact path='/login' element={<Login />}></Route>
