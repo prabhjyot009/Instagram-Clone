@@ -11,15 +11,15 @@ module.exports = (req, res, next) => {
         return res.status(401).json({error:"User not logged in"});
     }
     const token = authorization.replace("Bearer ","");
-    jwt.verify(token, JWT_SECRET, (err, payload) => {
+    jwt.verify(token, JWT_SECRET, (error, payload) => {
         if(error) {
             return res.status(401).json({error:"User not logged in"});
         }
         const {_id} = payload;
-        UserModel.findById(_id).
-        then(dbUser=> {
+        UserModel.findById(_id)
+        .then((dbUser)=> {
             req.user = dbUser;
             next(); //goes to the next middleware or goes to the rest api
-        });
+        })
     });
 }
