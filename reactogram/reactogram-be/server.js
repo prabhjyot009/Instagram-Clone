@@ -15,6 +15,8 @@ mongoose.connection.on('error', (error) => {
     console.log("Some error while connecting to DB");
 })
 
+require('./models/user_model');
+
 app.use(cors());
 app.use(express.json());
 
