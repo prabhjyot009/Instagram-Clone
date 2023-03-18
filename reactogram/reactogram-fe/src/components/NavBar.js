@@ -18,7 +18,7 @@ const NavBar = () => {
                         <a className="nav-link text-dark fs-5" href="#"><i className="fa-regular fa-heart"></i></a>
                         <div className="dropdown">
                           <a className="btn" href="#" role="button" data-bs-toggle="dropdown">
-                          <img className='navbar-profile-pic' alt="profile pic" src="https://images.unsplash.com/photo-1445543949571-ffc3e0e2f55e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d2ludGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                          <img className='navbar-profile-pic' alt="profile pic" src="https://images.unsplash.com/photo-1561084746-f360502e5abe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bW9uc3RlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" />
                           </a>
 
                           <ul className="dropdown-menu">

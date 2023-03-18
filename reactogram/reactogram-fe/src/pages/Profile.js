@@ -18,11 +18,11 @@ const Profile = () => {
     <div className='container shadow mt-3 p-4'>
       <div className='row'>
         <div className='col-md-6 d-flex flex-column'>
-          <img className='p-2 profile-pic img-fluid' alt="profile pic" src="https://images.unsplash.com/photo-1453306458620-5bbef13a5bca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHdpbnRlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" />
-          <p className='ms-3 fs-5 fw-bold'>john_doe</p>
-          <p className='ms-3 fs-5'>John Doe</p>
-          <p className='ms-3 fs-5'>UI/UX Designer @john | Follow @johndoe</p>
-          <p className='ms-3 fs-5'>My portfolio on <a href="#">www.portfolio.com/john</a></p>
+          <img className='p-2 profile-pic img-fluid' alt="profile pic" src="https://images.unsplash.com/photo-1561084746-f360502e5abe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bW9uc3RlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" />
+          <p className='ms-3 fs-5 fw-bold'>prabhjyot_009</p>
+          <p className='ms-3 fs-5'>Prabhjyot Singh</p>
+          <p className='ms-3 fs-5'>UI/UX Designer @brar | Follow @singhbrar</p>
+          <p className='ms-3 fs-5'>My portfolio on <a href="#">https://github.com/prabhjyot009</a></p>
         </div>
         <div className='col-md-6 d-flex flex-column justify-content-between mt-3'>
           <div className='d-flex justify-content-equal mx-auto'>
@@ -31,7 +31,7 @@ const Profile = () => {
               <p>Posts</p>
             </div>
             <div className='count-section px-4 px-md-5 text-center fw-bold'>
-              <h4>20</h4>
+              <h4>20k</h4>
               <p>Followers</p>
             </div>
             <div className='ps-md-5 ps-4 text-center fw-bold'>
@@ -57,34 +57,34 @@ const Profile = () => {
       <div className='row mb-4'>
         <div className='col-md-4 col-sm-12'>
           <div className="card" onClick={handleShow}>
-            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZsb3dlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" className="card-img-top" alt="flower" />
+            <img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8b2ZmaWNlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" className="card-img-top" alt="office" />
           </div>
         </div>
         <div className='col-md-4 col-sm-12'>
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZsb3dlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" className="card-img-top" alt="flower" />
+            <img src="https://images.unsplash.com/photo-1536882240095-0379873feb4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cGxhbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" className="card-img-top" alt="plant" />
           </div>
         </div>
         <div className='col-md-4 col-sm-12'>
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZsb3dlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" className="card-img-top" alt="flower" />
+            <img src="https://images.unsplash.com/photo-1476820865390-c52aeebb9891?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJhY2tncm91bmR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" className="card-img-top" alt="road" />
           </div>
         </div>
       </div>
       <div className='row mb-4'>
         <div className='col-md-4 col-sm-12'>
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZsb3dlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" className="card-img-top" alt="flower" />
+            <img src="https://images.unsplash.com/photo-1516542076529-1ea3854896f2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGNvbXB1dGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=600&q=60" className="card-img-top" alt="flower" />
           </div>
         </div>
         <div className='col-md-4 col-sm-12'>
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZsb3dlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" className="card-img-top" alt="flower" />
+            <img src="https://images.unsplash.com/photo-1564325724739-bae0bd08762c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fG5ldHdvcmt8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" className="card-img-top" alt="flower" />
           </div>
         </div>
         <div className='col-md-4 col-sm-12'>
           <div className="card">
-            <img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGZsb3dlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" className="card-img-top" alt="flower" />
+            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHRlY2hub2xvZ3l8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" className="card-img-top" alt="flower" />
           </div>
         </div>
       </div>
@@ -127,7 +127,7 @@ const Profile = () => {
             <div className='col-md-6'>
                   <div className='row'>
                     <div className='col-6 d-flex'>
-                        <img className='p-2 post-profile-pic' alt="profile pic" src="https://images.unsplash.com/photo-1445543949571-ffc3e0e2f55e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8d2ludGVyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                        <img className='p-2 post-profile-pic' alt="profile pic" src="https://images.unsplash.com/photo-1561084746-f360502e5abe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bW9uc3RlcnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60" />
                         <div className='mt-2 ms-2'>
                             <p className='fs-6 fw-bold'>Title</p>
                             <p className='location'>Description</p>
