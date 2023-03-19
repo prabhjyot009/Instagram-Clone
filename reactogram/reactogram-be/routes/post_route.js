@@ -43,4 +43,23 @@ router.post('/createpost', protectedRoute, (req, res) => {
         })
 });
 
+router.delete("/deletepost/:postId", protectedRoute, (req, res) => {
+    PostModel.findOne({_id: req.params.postId})
+    .populate("author", "_id")
+    .exec((error, postFound) => {
+        if(error || !postFound) {
+            return res.status(400).json({error: "Post does not exist."});
+        }
+        //check if the post author is same as loggedin user only then allow connection
+        if(postFound.author._id.toString() === req.user._id.toString()) {
+            postFound.remove()
+            .then((data) => {
+                res.status(200).json({result: data});
+            })
+            .catch((error) => {
+                console.log(error);
+            })
+        }
+        })
+});
 module.exports = router;
