@@ -3,14 +3,21 @@ import './Profile.css'
 import Modal from 'react-bootstrap/Modal';
 import horizontalMoreAction from '../images/horizontalMoreAction.PNG'
 import '../components/Card.css'
-import { API_Base_URL } from '../../src/config';
+import { API_BASE_URL } from '../../src/config';
 import axios from 'axios';
-
+import Swal from 'sweetalert2';
 const Profile = () => {
 
   const[image, setImage]=useState({preview:"", data:""})
 
   const [show, setShow] = useState(false);
+
+
+  const [caption,setCaption] =useState("");
+  const [location,setLocation] =useState("");
+
+
+
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -19,6 +26,12 @@ const Profile = () => {
 
   const handlePostClose = () => setShowPost(false);
   const handlePostShow = () => setShowPost(true);
+const CONFIG_OBJ = {
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': "Bearer "+localStorage.getItem("token")
+    }
+  }
 
   const handleFileSelect = (event) => {
     const img ={
@@ -28,13 +41,38 @@ const Profile = () => {
     setImage(img);
   }
 
-  const handleUpload = async () => {
+  const handleImgUpload = async () => {
     let formData = new FormData();
     formData.append("file", image.data);
 
-    const response = axios.post()
+    const response = axios.post(`${API_BASE_URL}/uploadFile`, formData, CONFIG_OBJ)
+    return response;
   }
 
+  const addPost =async () =>{
+    if(image.preview === ''){
+      Swal.fire({
+        icon: 'error',
+        title: 'post image is required',
+      })
+    }else if(caption === ''){
+      Swal.fire({
+        icon: 'error',
+        title: 'post caption is required',
+      })
+    }else if(location === ''){
+      Swal.fire({
+        icon: 'error',
+        title: 'post location is required',
+      })
+    }else{
+
+    const imgRes =await handleImgUpload();
+    //add values rule for caption and location
+    const request ={description:caption, location:location, image: `${API_BASE_URL}/${imgRes.data.fileName}`}
+    //write api call to create post
+  }
+  }
   return (
     <div className='container shadow mt-3 p-4'>
       <div className='row'>
@@ -218,20 +256,20 @@ const Profile = () => {
                 <div className='row'>
                   <div className='col-sm-12 mb-3'>
                     <div className="form-floating">
-                      <textarea className="form-control" placeholder="Add Caption" id="floatingTextarea"></textarea>
+                      <textarea onChange={(ev)=>setCaption(ev.target.value)} className="form-control" placeholder="Add Caption" id="floatingTextarea"></textarea>
                       <label for="floatingTextarea">Add Caption</label>
                     </div>
                   </div>
                   <div className='col-sm-12'>
                     <div className="form-floating mb-3">
-                      <input type="text" className="form-control" id="floatingInput" placeholder="Add Location" />
+                      <input type="text" onChange={(ev)=>setLocation(ev.target.value)} className="form-control" id="floatingInput" placeholder="Add Location" />
                       <label for="floatingInput"><i className="fa-solid fa-location-pin pe-2"></i>Add Location</label>
                     </div>
                   </div>
                 </div>
                 <div className='row'>
                   <div className='col-sm-12'>
-                    <button className="custom-btn custom-btn-pink float-end">
+                    <button onCLick={() => addPost()} className="custom-btn custom-btn-pink float-end">
                       <span className='fs-6 fw-600'>Post</span>
                     </button>                                                                                                                               
                   </div>
