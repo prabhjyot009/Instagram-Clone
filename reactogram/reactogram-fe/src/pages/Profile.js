@@ -3,8 +3,13 @@ import './Profile.css'
 import Modal from 'react-bootstrap/Modal';
 import horizontalMoreAction from '../images/horizontalMoreAction.PNG'
 import '../components/Card.css'
+import { API_Base_URL } from '../../src/config';
+import axios from 'axios';
 
 const Profile = () => {
+
+  const[image, setImage]=useState({preview:"", data:""})
+
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -14,6 +19,22 @@ const Profile = () => {
 
   const handlePostClose = () => setShowPost(false);
   const handlePostShow = () => setShowPost(true);
+
+  const handleFileSelect = (event) => {
+    const img ={
+      preview: URL.createObjectURL(event.target.files[0]),
+      data: event.target.files[0]
+    }
+    setImage(img);
+  }
+
+  const handleUpload = async () => {
+    let formData = new FormData();
+    formData.append("file", image.data);
+
+    const response = axios.post()
+  }
+
   return (
     <div className='container shadow mt-3 p-4'>
       <div className='row'>
@@ -186,8 +207,10 @@ const Profile = () => {
               <div className='col-md-6 col-sm-12 mb-3'>
                   <div className='upload-box'>
                     <div className="dropZoneContainer">
-                        <input type="file" id="drop_zone" className="FileUpload" accept=".jpg,.png,.gif" onchange="handleFileSelect(this) " />
-                        <div className="dropZoneOverlay"><i class="fa-solid fa-cloud-arrow-up fs-1"></i><br />Upload Photo From Computer</div>
+                        <input name='file' type="file" id="drop_zone" className="FileUpload" accept=".jpg,.png,.gif" onChange={handleFileSelect} />
+                        <div className="dropZoneOverlay">
+                          {image.preview && <img src={image.preview}width='150' height='150' />}
+                          <i class="fa-solid fa-cloud-arrow-up fs-1"></i><br />Upload Photo From Computer</div>
                     </div>
                   </div>
               </div>
